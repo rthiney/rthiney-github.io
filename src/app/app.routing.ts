@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders  } from '@angular/core';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent,  pathMatch: 'full' },
+  { path: '', component: HomeComponent  },
   { path: 'profile', component: ProfileComponent },
   { path: 'clients', component: ClientsComponent },
   { path: 'projects', component: ProjectsComponent },
