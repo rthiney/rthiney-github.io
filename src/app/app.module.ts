@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { AlertModule } from 'ngx-bootstrap';
 import { ReCaptchaModule } from 'angular2-recaptcha';
-import { AlertMyComponent } from './shared/alert/alert.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,6 @@ import { AlertMyComponent } from './shared/alert/alert.component';
     PrivacyComponent,
     MailFormComponent,
     MailProfileComponent,
-    AlertMyComponent,
     ContactComponent
 ],
   imports: [
