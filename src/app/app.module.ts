@@ -1,10 +1,11 @@
+import { MailProfileComponent } from './shared/mail-profile/mail-profile.component';
 
 import { environment } from './../environments/environment';
 import { MailFormComponent } from './shared/mail-form/mail-form.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, enableProdMode, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +18,7 @@ import { ApplicationInsightsModule, AppInsightsService } from '@markpieszak/ng-a
 import { ToastrModule } from 'ngx-toastr';
 import {   BrowserAnimationsModule   } from '@angular/platform-browser/animations'
 import { CommonModule } from '@angular/common';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +29,18 @@ import { CommonModule } from '@angular/common';
     NavComponent
     ,
     PrivacyComponent,
-    MailFormComponent
-  ],
+    MailFormComponent,
+    MailProfileComponent
+,
+    ContactComponent
+],
   imports: [
 CommonModule,
 
     BrowserModule,
     HttpModule,
   BrowserAnimationsModule,
+  FormsModule,
     ReactiveFormsModule,
     routing,
     ToastrModule.forRoot(),

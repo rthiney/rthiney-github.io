@@ -24,7 +24,7 @@
             "../node_modules/ngx-toastr/toastr.css"
         ],
         "scripts": [
-
+            "assets/js/material-bootstrap-wizard.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {

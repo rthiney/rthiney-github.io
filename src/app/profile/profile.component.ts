@@ -1,5 +1,4 @@
 import { MailFormComponent } from './../shared/mail-form/mail-form.component';
-
 import { Component, OnInit} from '@angular/core';
 import { AppInsightsService } from '@markpieszak/ng-application-insights';
 import * as $ from 'jquery';
@@ -19,6 +18,9 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     $('#bid').removeClass();
     $('#bid').addClass('profile-page');
+ $.getScript('/assets/js/scripts.js');
+   $.getScript('/assets/js/material-bootstrap-wizard.js');
+
   }
 
 }

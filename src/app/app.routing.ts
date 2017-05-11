@@ -1,3 +1,4 @@
+import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'clients', component: ClientsComponent },
   { path: 'projects', component: ProjectsComponent },
+    { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '' ,pathMatch: 'full' }
 ];
 // @NgModule({

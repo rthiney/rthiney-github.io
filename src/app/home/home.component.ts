@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
- //   $.getScript('/assets/js/scripts.js');
+ $.getScript('/assets/js/scripts.js');
+
+
   }
 ngAfterViewInit()
 {
