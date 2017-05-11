@@ -8,64 +8,64 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
         		</button>
-            <a href="http://rthiney.github.io">
+            <a href="https://www.beyond.com/RaphaelThiney">
                 <div class="logo-container">
                     <div class="logo">
                         <img src="/assets/img/RaphPhotoFaceSmall.jpg">
                     </div>
                     <div class="brand">
-                        Raphael Thiney
+                        Raphaël Thiney
                     </div>
                 </div>
             </a>
+        </div> 
+            <div class="collapse navbar-collapse" id="navigation-example">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a [routerLink]=" ['/'] ">Home</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/profile']">Profile</a>
+                    </li>
+                    <li>
+
+                        <a [routerLink]="['/clients']">Clients</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/projects']">Projects</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/contact']">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/RaphaelThiney" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/raphaelthiney/" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/raphael.thiney" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rthiney" target="_blank" class="btn btn-simple btn-white btn-just-icon">
+                            <i class="fa fa-github"></i>
+
+
+                        </a>
 
 
 
-
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <div class="collapse navbar-collapse" id="navigation-example">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a [routerLink]=" ['/'] ">Home</a>
-                </li>
-                <li>
-                    <a [routerLink]="['/profile']">Profile</a>
-                </li>
-                <li>
-
-                    <a [routerLink]="['/clients']">Clients</a>
-                </li>
-                <li>
-                    <a [routerLink]="['/projects']">Projects</a>
-                </li>
-                <li>
-                    <a [routerLink]="['/contact']">Contact</a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/RaphaelThiney" target="_blank" class="btn btn-simple btn-white btn-just-icon">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/raphaelthiney/" target="_blank" class="btn btn-simple btn-white btn-just-icon">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.facebook.com/raphael.thiney" target="_blank" class="btn btn-simple btn-white btn-just-icon">
-                        <i class="fa fa-facebook-square"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/rthiney" target="_blank" class="btn btn-simple btn-white btn-just-icon">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
 </nav>
 
 <div class="wrapper">
@@ -75,6 +75,7 @@
                 <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                     <div class="card card-signup">
                         <form [formGroup]="msgForm" novalidate (ngSubmit)="onSubmit(msgForm)">
+
                             <div class="header header-primary text-center">
                                 <h4>Contact Me!</h4>
 
@@ -88,7 +89,7 @@
 										</span>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Name</label>
-                                        <input type="text" class="form-control" formControlName="name" placeholder="Name...">
+                                        <input type="text" class="form-control" formControlName="name">
                                     </div>
                                 </div>
                                 <div class="input-group">
@@ -97,7 +98,7 @@
 										</span>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Email</label>
-                                        <input type="text" class="form-control" formControlName="email" placeholder="Email...">
+                                        <input type="text" class="form-control" formControlName="email">
                                     </div>
                                 </div>
                                 <div class="input-group">
@@ -113,14 +114,20 @@
 
 
                                 <div class="text-center">
-                                    <button type="submit" [disabled]="msgForm.pristine" class="btn btn-primary btn-raised">		Send Message </button>
+                                    <button type="submit" [disabled]="(msgForm.pristine || this.token.length==0)" class="btn btn-primary btn-raised">		Send Message </button>
+                                    <re-captcha site_key="6Lcx2iAUAAAAALxYqTLpTIVg_AmCHunfdACebjg5" (captchaResponse)="handleCorrectCaptcha($event)"></re-captcha>
 
                                 </div>
                             </div>
+
+
                         </form>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
 
 

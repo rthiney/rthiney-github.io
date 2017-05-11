@@ -1,3 +1,4 @@
+import { PrivacyComponent } from './privacy/privacy.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'clients', component: ClientsComponent },
   { path: 'projects', component: ProjectsComponent },
     { path: 'contact', component: ContactComponent },
+        { path: 'privacy', component: PrivacyComponent },
   { path: '**', redirectTo: '' ,pathMatch: 'full' }
 ];
 // @NgModule({

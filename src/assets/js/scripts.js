@@ -1,5 +1,4 @@
  $().ready(function() {
-     $('[rel="tooltip"]').tooltip();
 
      console.log("Script Loaded!!!");
      // the body of this function is in assets/material-kit.js
@@ -11,7 +10,7 @@
 
          $(window).on('scroll', materialKitDemo.checkScrollForParallax);
      }
-
+  $('[rel="tooltip"]').tooltip();
 
  });
 

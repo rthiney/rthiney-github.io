@@ -16,9 +16,12 @@ import { routing } from './app.routing';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ApplicationInsightsModule, AppInsightsService } from '@markpieszak/ng-application-insights';
 import { ToastrModule } from 'ngx-toastr';
-import {   BrowserAnimationsModule   } from '@angular/platform-browser/animations'
+import {   BrowserAnimationsModule   } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
+import { AlertModule } from 'ngx-bootstrap';
+import { ReCaptchaModule } from 'angular2-recaptcha';
+import { AlertMyComponent } from './shared/alert/alert.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +29,11 @@ import { ContactComponent } from './contact/contact.component';
     ProjectsComponent,
     ClientsComponent,
     ProfileComponent,
-    NavComponent
-    ,
+    NavComponent    ,
     PrivacyComponent,
     MailFormComponent,
-    MailProfileComponent
-,
+    MailProfileComponent,
+    AlertMyComponent,
     ContactComponent
 ],
   imports: [
@@ -43,6 +45,8 @@ CommonModule,
   FormsModule,
     ReactiveFormsModule,
     routing,
+    ReCaptchaModule,
+    AlertModule.forRoot(),
     ToastrModule.forRoot(),
     ApplicationInsightsModule.forRoot({
       instrumentationKey:   environment.insightKey
